@@ -1,13 +1,12 @@
 <?php
 
+include "./fcm/notification2.php" ;
+include "./connect.php" ;
 
-include './connect.php';
-$table = "users";
-// $name = filterRequest("namerequest");
-$data = array( 
-"users_name" => "wael",
-"users_email" => "wael@gmail.com",
-"users_phone" => "324234",
-"users_verifycode" => "3243243",       
-);
-$count = insertData($table , $data);
+echo 
+sendfcm("From Admin", "hi" , "users" , "none" , "none") ; 
+
+// sendDcm("hi", "zoher" ,"delivery",  "none" , "none") ; 
+
+
+?>
